@@ -6,6 +6,8 @@ const players = require("./routes/api/players");
 
 const app = express();
 
+app.use(cors());
+
 app.use(bodyParser.json())
 
 //DB Config
