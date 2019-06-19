@@ -9,7 +9,7 @@ const Player = require("../../models/Player");
 //METHOD: GET
 router.get('/', (req,res) => {
     Player.find()
-        .sort({date: -1})
+        .sort({score: 1})
         .then(items => res.json(items));
 })
 
