@@ -10,6 +10,7 @@ const Player = require("../../models/Player");
 router.get('/', (req,res) => {
     Player.find()
         .sort({score: -1})
+        .limit(5)
         .then(items => res.json(items));
 })
 
